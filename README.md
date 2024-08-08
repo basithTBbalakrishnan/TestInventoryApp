@@ -1,24 +1,49 @@
-# README
+Installation
+===========================
+Using rails Rails 7.0.8.4
+Using ruby 3.1.6
+Datebase : postgres
+====================
+Install node, npm package for turbo and stimulus.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+After installing above 
 
-Things you may want to cover:
+1. perform bundle install.
+There is a posiblity of getting error with gem psych. if getting a error downgrade the gem version to 3.0.0
 
-* Ruby version
+bin/rails turbo:install
+bin/rails stimulus:install
 
-* System dependencies
+perform the above two commands for making work the turbo and stimulus. 
 
-* Configuration
+After successfull bundle install
 
-* Database creation
+gem 'turbo-rails'
+gem 'stimulus-rails'
+gem 'webpacker'
+gem pg
 
-* Database initialization
+add these gems into the gem file bundle install again.
 
-* How to run the test suite
+After successfull bundle install 
 
-* Services (job queues, cache servers, search engines, etc.)
+Perform 
+ 1. rake db:create
+ 2. rake db:migrate
 
-* Deployment instructions
+ bin/rails tailwind-css:install
 
-* ...
+ Perform above command for default responsive view.
+
+after all successfull execution of these above commands
+
+perform 
+
+ 1. rails s
+
+ start the rails server.
+
+ after starting the server you can access the application in local macine localhost: 3000
+
+ Thanks.
+
