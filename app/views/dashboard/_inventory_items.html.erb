@@ -1,0 +1,7 @@
+<div id="inventory_item_<%= inventory_item.id %>">
+  <p><%= inventory_item.name %>: <%= inventory_item.quantity %></p>
+  <%= form_with model: inventory_item, data: { turbo_frame: "inventory_items" ,controller: "update_form"}, method: :patch do |form| %>
+    <%= form.number_field :quantity, min: 0, data: { target: "update_form.quantity" } %>
+    <%= form.submit "Update" %>
+  <% end %>
+</div>
